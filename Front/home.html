@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Price Classification</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Footer styles */
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <!-- Web Name -->
+        <a class="navbar-brand" href="#">Device Price Classification</a>
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-4" style="padding: 20px;">
+    <h2>We are happy to help you determine the Price Category of your device</h2>
+    <form action="/submitData" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="battery_power">Battery Power (mAh)</label>
+                    <input type="text" class="form-control" id="battery_power" name="battery_power">
+                </div>
+                <div class="form-group">
+                    <label for="blue">Bluetooth</label>
+                    <select class="form-control" id="blue" name="blue">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dual_sim">Dual SIM</label>
+                    <select class="form-control" id="dual_sim" name="dual_sim">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fc">Front Camera (megapixels)</label>
+                    <input type="text" class="form-control" id="fc" name="fc">
+                </div>
+                <div class="form-group">
+                    <label for="four_g">4G</label>
+                    <select class="form-control" id="four_g" name="four_g">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="int_memory">Internal Memory (GB)</label>
+                    <input type="text" class="form-control" id="int_memory" name="int_memory">
+                </div>
+                <div class="form-group">
+                    <label for="m_dep">Mobile Depth (cm)</label>
+                    <input type="text" class="form-control" id="m_dep" name="m_dep">
+                </div>
+                <div class="form-group">
+                    <label for="mobile_wt">Mobile Weight</label>
+                    <input type="text" class="form-control" id="mobile_wt" name="mobile_wt">
+                </div>
+                <div class="form-group">
+                    <label for="n_cores">Number of Cores</label>
+                    <input type="text" class="form-control" id="n_cores" name="n_cores">
+                </div>
+                <div class="form-group">
+                    <label for="pc">Primary Camera (megapixels)</label>
+                    <input type="text" class="form-control" id="pc" name="pc">
+                </div>
+                <div class="form-group">
+                    <label for="px_height">Pixel Resolution Height</label>
+                    <input type="text" class="form-control" id="px_height" name="px_height">
+                </div>
+                <div class="form-group">
+                    <label for="px_width">Pixel Resolution Width</label>
+                    <input type="text" class="form-control" id="px_width" name="px_width">
+                </div>
+                <div class="form-group">
+                    <label for="ram">RAM (MB)</label>
+                    <input type="text" class="form-control" id="ram" name="ram">
+                </div>
+                <div class="form-group">
+                    <label for="sc_h">Screen Height (cm)</label>
+                    <input type="text" class="form-control" id="sc_h" name="sc_h">
+                </div>
+                <div class="form-group">
+                    <label for="sc_w">Screen Width (cm)</label>
+                    <input type="text" class="form-control" id="sc_w" name="sc_w">
+                </div>
+                <div class="form-group">
+                    <label for="talk_time">Talk Time</label>
+                    <input type="text" class="form-control" id="talk_time" name="talk_time">
+                </div>
+                <div class="form-group">
+                    <label for="three_g">3G</label>
+                    <select class="form-control" id="three_g" name="three_g">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="touch_screen">Touch Screen</label>
+                    <select class="form-control" id="touch_screen" name="touch_screen">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="wifi">WiFi</label>
+                    <select class="form-control" id="wifi" name="wifi">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
+        </div>
+      
+    </form>
+</div>
+<br>
+<br>
+<br>
+<!-- Footer -->
+<div class="footer">
+    <p>Designed and Developed by <a href="https://www.linkedin.com/in/eslam-shouman-0958091b4/">Eslam Shouman</a></p>
+</div>
+
+<!-- Link Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
